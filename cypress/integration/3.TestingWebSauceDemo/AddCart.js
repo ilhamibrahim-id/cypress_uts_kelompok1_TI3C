@@ -1,17 +1,17 @@
 describe('TC_ADDCART_001', () => {
-    it('Membuka web siakad polinema', () => {
+    it('Membuka web sauce demo', () => {
       cy.visit('/');
 
     })
-    it('Memasukan Username Dengan Nim', () => {
-      cy.get('#username').type("1941720180");
+    it('Memasukan Username', () => {
+        cy.contains('Username').type("standard_user");
       
     })
     it('Memasukan Password', () => {
-      cy.get('#password').type("surabayaos");
+      cy.get('#password').type("secret_sauce");
       
     })
     it('Submit Login', () => {
-      cy.contains('Login ').click();  
+        cy.get('#login-button').click();
     })
   })
