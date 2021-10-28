@@ -1,0 +1,16 @@
+# Kelompok 1 | TI-3C
+## Anggota Kelompok :
+<ol>
+<li>ILHAM IBRAHIM
+<br />NIM. 1941720180</li>
+<li>AWANG SYUKRIANSAH DIRGANTORO
+<br />NIM. 1941720065</li>
+<li>VEGA ANGGARESTA
+<br />NIM. 2041723013</li>
+<li>TITA WIJAYANTI 
+<br />NIM. 1941720053</li>
+<li>NADIA LAYRA AZIZA 
+<br />NIM. 1941720061</li>
+<li>SHELYCA SURRAYENSIH 
+<br />NIM. 1941720021</li>
+</ol>
