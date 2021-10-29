@@ -1,4 +1,4 @@
-describe('TC_ADDCART_001 | 1941720180 - ILHAM IBRAHIM', () => {
+describe('TC_ADDCART | 1941720180 - ILHAM IBRAHIM', () => {
     it('TC_ADDCART_001', () => {
       cy.visit('/');
       cy.get('#user-name').type("standard_user");
