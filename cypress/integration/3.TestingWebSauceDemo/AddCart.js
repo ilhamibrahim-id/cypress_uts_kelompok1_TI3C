@@ -1,26 +1,18 @@
 describe('TC_ADDCART_001 | 1941720180 - ILHAM IBRAHIM', () => {
-    it('Membuka web sauce demo', () => {
+    it('TC_ADDCART_001', () => {
       cy.visit('/');
-
-    })
-    it('Memasukan Username', () => {
       cy.get('#user-name').type("standard_user");
-      
-    })
-    it('Memasukan Password', () => {
       cy.get('#password').type("secret_sauce");
-      
-    })
-    it('Klik Login', () => {
-        cy.get('#login-button').click();
-    })
-
-    it('Tambah Produk Ke Keranjang', () => {
-        cy.get('#add-to-cart-sauce-labs-backpack').click();
-        cy.get('#add-to-cart-sauce-labs-bike-light').click();
-    })
-    it('Klik Cart', () => {
+      cy.get('#login-button').click();
+      cy.get('#add-to-cart-sauce-labs-backpack').click();
+      cy.get('#add-to-cart-sauce-labs-bike-light').click();
       cy.get('.shopping_cart_link').click();
+      cy.contains('Checkout').click();  
+      cy.get('#first-name').type("Ilham");
+      cy.get('#last-name').type("Ibrahim");
+      cy.get('#postal-code').type("60127");
+      cy.get('#continue').click();
+      cy.get('#finish').click();
+      cy.contains('THANK YOU FOR YOUR ORDER').should('be.visible');
     })
-    
   })
