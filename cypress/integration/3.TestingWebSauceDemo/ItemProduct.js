@@ -27,4 +27,16 @@ describe('Testing Item Product', () => {
         // Assertion
         cy.get('[data-test=add-to-cart-sauce-labs-backpack]').should('be.visible')
     })
+
+    it('TC_ ItemProduk _003 (Check button BACK TO PRODUCTS in page detail product for Standard User)', () => {
+        cy.get('#user-name').type('standard_user') 
+        cy.get('#password').type('secret_sauce') 
+        cy.get('#login-button').click() 
+        cy.get('#item_4_img_link > .inventory_item_img').click()
+        cy.get('[data-test=back-to-products]').click()
+        // Assertion
+        cy.contains('Products').should('be.visible')
+    })
 })
+
+
