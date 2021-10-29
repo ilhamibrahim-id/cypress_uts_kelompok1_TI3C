@@ -46,6 +46,18 @@ describe('Testing Item Product', () => {
         // Assertion
         cy.contains('Sauce Labs Backpack').should('be.visible')
     })
+
+    it('TC_ ItemProduk _005 (Check button ADD TO CARD/REMOVE for Problem User)', () => {
+        cy.get('#user-name').type('problem_user') 
+        cy.get('#password').type('secret_sauce') 
+        cy.get('#login-button').click() 
+        cy.get('[data-test=add-to-cart-sauce-labs-backpack]').click() 
+        // Assertion
+        cy.get('[data-test=remove-sauce-labs-backpack]').should('be.visible') 
+        cy.get('[data-test=remove-sauce-labs-backpack]').click() 
+        // Assertion
+        cy.get('[data-test=add-to-cart-sauce-labs-backpack]').should('be.visible')
+    })
 })
 
 
