@@ -37,6 +37,15 @@ describe('Testing Item Product', () => {
         // Assertion
         cy.contains('Products').should('be.visible')
     })
+
+    it('TC_ ItemProduk _004 (Check Item Product for Problem User)', () => {
+        cy.get('#user-name').type('problem_user') 
+        cy.get('#password').type('secret_sauce') 
+        cy.get('#login-button').click()
+        cy.get('#item_4_img_link > .inventory_item_img').click()
+        // Assertion
+        cy.contains('Sauce Labs Backpack').should('be.visible')
+    })
 })
 
 
