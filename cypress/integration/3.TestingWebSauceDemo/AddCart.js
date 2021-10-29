@@ -15,4 +15,19 @@ describe('TC_ADDCART_001 | 1941720180 - ILHAM IBRAHIM', () => {
       cy.get('#finish').click();
       cy.contains('THANK YOU FOR YOUR ORDER').should('be.visible');
     })
+
+    it('TC_ADDCART_002', () => {
+      cy.visit('/');
+      cy.get('#user-name').type("standard_user");
+      cy.get('#password').type("secret_sauce");
+      cy.get('#login-button').click();
+      cy.get('#add-to-cart-sauce-labs-backpack').click();
+      cy.get('#add-to-cart-sauce-labs-bike-light').click();
+      cy.get('.shopping_cart_link').click();
+      cy.contains('Checkout').click();  
+      cy.get('#last-name').type("Ibrahim");
+      cy.get('#postal-code').type("60127");
+      cy.get('#continue').click();
+      cy.contains('Error: First Name is required').should('be.visible');
+    })
   })
