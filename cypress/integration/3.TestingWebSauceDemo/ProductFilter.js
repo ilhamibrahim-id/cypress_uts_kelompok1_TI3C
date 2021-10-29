@@ -23,4 +23,12 @@ describe('TC_PRODUCTFILTER | 1941720053 - Tita Wijayanti', () => {
         cy.get('[data-test=\"product_sort_container"\]').select("lohi");
         cy.get('.inventory_item_price:eq(0)').should('have.text', "$7.99");
     })
+    it('TC_PRODUCTFILTER_004', () => {
+        cy.visit('/');
+        cy.get('#user-name').type("standard_user");
+        cy.get('#password').type("secret_sauce");
+        cy.get('#login-button').click();
+        cy.get('[data-test=\"product_sort_container"\]').select("hilo");
+        cy.get('.inventory_item_price:eq(0)').should('have.text', "$49.99");
+    })
 })
