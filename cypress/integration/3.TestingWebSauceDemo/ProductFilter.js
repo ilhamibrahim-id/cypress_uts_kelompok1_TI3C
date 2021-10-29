@@ -31,4 +31,12 @@ describe('TC_PRODUCTFILTER | 1941720053 - Tita Wijayanti', () => {
         cy.get('[data-test=\"product_sort_container"\]').select("hilo");
         cy.get('.inventory_item_price:eq(0)').should('have.text', "$49.99");
     })
+    it('TC_PRODUCTFILTER_005', () => {
+        cy.visit('/');
+        cy.get('#user-name').type("problem_user");
+        cy.get('#password').type("secret_sauce");
+        cy.get('#login-button').click();
+        cy.get('[data-test=\"product_sort_container"\]').select("za");
+        cy.get('.inventory_item_name:eq(0)').should('have.text', "Test.allTheThings() T-Shirt (Red)");
+    })
 })
