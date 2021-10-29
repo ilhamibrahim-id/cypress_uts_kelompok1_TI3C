@@ -1,0 +1,18 @@
+// / <reference types="cypress"/>
+
+// 1941720061 - Nadia Layra Aziza
+
+describe('Testing Item Product', () => { 
+    beforeEach(() => {
+        cy.visit('/') 
+    })
+
+    it('TC_ ItemProduk _001 (Check Item Product for Standard User)', () => {
+        cy.get('#user-name').type('standard_user') 
+        cy.get('#password').type('secret_sauce') 
+        cy.get('#login-button').click()
+        cy.get('#item_4_img_link > .inventory_item_img').click()
+        // Assertion
+        cy.contains('Sauce Labs Backpack').should('be.visible')
+    })
+})
