@@ -35,4 +35,21 @@ describe('TC_SIDEBAR| 2041723013 - VEGA ANGGARESTA', function() {
         cy.get('.is-full-mobile > .content-container > .title').should('be.visible')
     })
 
+    it('TC_SIDEBAR_003', function(){
+        cy.visit('/')
+
+        cy.get('[data-test=username]').type('standard_user')
+
+        cy.get('[data-test=password]').type('secret_sauce')
+
+        cy.get('[data-test=login-button]').click()
+
+        cy.get('#react-burger-menu-btn').click()
+
+        cy.get('#logout_sidebar_link').click()
+
+        // Assertion
+        cy.get('.login_logo').should('be.visible')
+    })
+
 })
