@@ -52,4 +52,24 @@ describe('TC_SIDEBAR| 2041723013 - VEGA ANGGARESTA', function() {
         cy.get('.login_logo').should('be.visible')
     })
 
+    it('TC_SIDEBAR_004', function(){
+        cy.visit('/')
+
+        cy.get('[data-test=username]').type('standard_user')
+
+        cy.get('[data-test=password]').type('secret_sauce')
+
+        cy.get('[data-test=login-button]').click()
+
+        cy.get('[data-test=add-to-cart-sauce-labs-backpack]').click()
+
+        cy.get('#react-burger-menu-btn').click()
+
+        cy.get('#reset_sidebar_link').click({force: true})
+
+        // Assertion
+        cy.get('[data-test=remove-sauce-labs-backpack]').should('be.visible')
+
+    })
+
 })
