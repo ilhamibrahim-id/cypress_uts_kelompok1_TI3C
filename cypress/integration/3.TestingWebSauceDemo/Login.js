@@ -32,13 +32,13 @@ describe('TS_LOGIN | 1941720065 - AWANG SYUKRIANSAH DIRGANTORO', () => {
         cy.get('#user-name').type("admin");
         cy.get('#password').type("admin");
         cy.get('#login-button').click();
-        cy.get('.error-mesage-container').find('h3').should('have,text', 'Epic sadface: Username and password do not match any user in this service');
+        cy.get('div[class="error-mesage-container error"]').find('h3').should('have,text', 'Epic sadface: Username and password do not match any user in this service');
     })
     it('TS_LOGIN_006', () => {
         cy.visit('/');
         cy.get('#user-name').type("admin");
         cy.get('#password').type("secret_sauce");
         cy.get('#login-button').click();
-        cy.get('.error-mesage-container').find('h3').should('have,text', 'Epic sadface: Username do not match any user in this service');
+        cy.get('div[class="error-mesage-container error"]').find('h3').should('have,text', 'Epic sadface: Username do not match any user in this service');
     })
 })
