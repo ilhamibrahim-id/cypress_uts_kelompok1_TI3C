@@ -1,8 +1,6 @@
 // / <reference types="cypress"/>
 
-// 1941720061 - Nadia Layra Aziza
-
-describe('Testing Item Product', () => { 
+describe('TC_ItemProduk | 1941720061 - Nadia Layra Aziza', () => { 
     beforeEach(() => {
         cy.visit('/') 
     })
