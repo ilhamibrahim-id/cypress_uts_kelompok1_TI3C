@@ -87,7 +87,7 @@ describe('TC_SIDEBAR| 2041723013 - VEGA ANGGARESTA', function() {
 
         cy.get('#react-burger-menu-btn').click()
 
-        //cy.get('#reset_sidebar_link').click()
+        cy.get('#reset_sidebar_link').click()
 
         cy.get('[data-test=remove-sauce-labs-backpack]').should('be.visible')
     })
