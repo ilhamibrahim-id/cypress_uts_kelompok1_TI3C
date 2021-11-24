@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "cypress": "^8.5.0"
+  },
+  "name": "cypress_uts_kelompok1_ti3c",
+  "description": "<ol>\r <li>ILHAM IBRAHIM\r <br />NIM. 1941720180</li>\r <li>AWANG SYUKRIANSAH DIRGANTORO\r <br />NIM. 1941720065</li>\r <li>VEGA ANGGARESTA\r <br />NIM. 2041723013</li>\r <li>TITA WIJAYANTI \r <br />NIM. 1941720053</li>\r <li>NADIA LAYRA AZIZA \r <br />NIM. 1941720061</li>\r <li>SHELYCA SURRAYENSIH \r <br />NIM. 1941720021</li>\r </ol>",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilhamibrahim-id/cypress_uts_kelompok1_TI3C.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilhamibrahim-id/cypress_uts_kelompok1_TI3C/issues"
+  },
+  "homepage": "https://github.com/ilhamibrahim-id/cypress_uts_kelompok1_TI3C#readme"
+}
